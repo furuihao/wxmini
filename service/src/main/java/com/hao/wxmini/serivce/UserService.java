@@ -7,5 +7,10 @@ import com.hao.wxmini.domain.User;
  * @create 2018/3/25
  */
 public interface UserService {
+    /**
+     * 新增用户
+     * @param name
+     * @return
+     */
     User save(String name);
 }
