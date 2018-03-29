@@ -6,14 +6,15 @@ package com.hao.wxmini.domain;
  */
 public class User {
 
-    private Integer id;
+    private Long id;
     private String name;
+    private Integer age;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -25,6 +26,13 @@ public class User {
         this.name = name;
     }
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
     @Override
     public String toString() {

@@ -14,11 +14,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Repository
 public class UserRepository {
-    private final ConcurrentMap<Integer,User> repository = new ConcurrentHashMap<>();
+    private final ConcurrentMap<Long,User> repository = new ConcurrentHashMap<>();
     private final static AtomicInteger idGenerator = new AtomicInteger();
 
     public boolean save(User user){
-        Integer id = idGenerator.get();
+        Long id = idGenerator.longValue();
         user.setId(id);
         repository.put(id,user);
         System.out.println("save:"+user.getName());
