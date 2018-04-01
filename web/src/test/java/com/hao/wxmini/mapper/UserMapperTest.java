@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
  * Created by gcb on 2018/3/29.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = WxminiApplication.class)
+@SpringBootTest
 public class UserMapperTest {
     @Resource
     private UserMapper userMapper;
