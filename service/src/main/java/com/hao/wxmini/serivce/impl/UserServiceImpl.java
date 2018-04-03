@@ -1,11 +1,13 @@
 package com.hao.wxmini.serivce.impl;
 
 import com.hao.wxmini.domain.User;
+import com.hao.wxmini.mapper.UserMapper;
 import com.hao.wxmini.repository.UserRepository;
 import com.hao.wxmini.serivce.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author hao
@@ -14,13 +16,17 @@ import javax.annotation.Resource;
 @Service
 public class UserServiceImpl implements UserService {
     @Resource
-    private UserRepository userRepository;
+    private UserMapper userMapper;
 
     @Override
-    public User save(String name) {
-        User user = new User();
-        user.setName(name);
-        userRepository.save(user);
-        return user;
+    public int save(User user) throws Exception {
+        int num = userMapper.insert(user);
+        throw new Exception("保存出错");
+        /*return num;*/
+    }
+
+    @Override
+    public List<User> search(){
+        return userMapper.search();
     }
 }

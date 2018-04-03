@@ -15,15 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    private final UserService userService ;
+    private final UserService userService;
 
     @Autowired
-    public UserController(UserService userService){
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
     @RequestMapping("/save")
-    public User save(@RequestParam String name){
-        return userService.save(name);
+    public User save(@RequestParam String name) throws Exception {
+        User u = new User();
+        u.setName(name);
+        userService.save(u);
+        return u;
     }
 }
