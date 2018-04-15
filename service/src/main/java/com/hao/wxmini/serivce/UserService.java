@@ -16,6 +16,8 @@ public interface UserService {
      */
     int save(User user) throws Exception;
 
+    User getById(Long id) throws Exception;
+
     /**
      * 搜索
      * @return

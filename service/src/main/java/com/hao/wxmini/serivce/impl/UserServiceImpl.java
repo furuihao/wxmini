@@ -26,6 +26,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getById(Long id) throws Exception {
+        return userMapper.getById(id);
+    }
+
+    @Override
     public List<User> search(){
         return userMapper.search(null);
     }

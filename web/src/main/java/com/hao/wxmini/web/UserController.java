@@ -29,4 +29,9 @@ public class UserController {
         userService.save(u);
         return u;
     }
+
+    @RequestMapping("/getById")
+    public User getUserById(@RequestParam Long id) throws Exception {
+        return userService.getById(id);
+    }
 }
