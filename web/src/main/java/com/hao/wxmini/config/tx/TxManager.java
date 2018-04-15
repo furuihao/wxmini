@@ -58,32 +58,6 @@ public class TxManager {
     }
 
 
-    // 创建事务通知
-    /*@Autowired
-    private DataSourceTransactionManager transactionManager;*/
 
-    /*@Bean(name = "txAdvice")
-    public TransactionInterceptor getAdvisor() throws Exception {
-
-        Properties properties = new Properties();
-        properties.setProperty("get*", "PROPAGATION_REQUIRED,-Exception,readOnly");
-        properties.setProperty("add*", "PROPAGATION_REQUIRED,-Exception,readOnly");
-        properties.setProperty("save*", "PROPAGATION_REQUIRED,-Exception,readOnly");
-        properties.setProperty("update*", "PROPAGATION_REQUIRED,-Exception,readOnly");
-        properties.setProperty("delete*", "PROPAGATION_REQUIRED,-Exception,readOnly");
-
-        TransactionInterceptor tsi = new TransactionInterceptor(transactionManager, properties);
-        return tsi;
-
-    }
-
-    @Bean
-    public BeanNameAutoProxyCreator txProxy() {
-        BeanNameAutoProxyCreator creator = new BeanNameAutoProxyCreator();
-        creator.setInterceptorNames("txAdvice");
-        creator.setBeanNames("*Service", "*ServiceImpl");
-        creator.setProxyTargetClass(true);
-        return creator;
-    }*/
 
 }

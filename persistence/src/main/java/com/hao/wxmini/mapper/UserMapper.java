@@ -9,8 +9,8 @@ import java.util.List;
 /**
  * Created by gcb on 2018/3/29.
  */
-public interface UserMapper {
-    int insert(User user);
+public interface UserMapper extends BaseMapper<User> {
+    /*int insert(User user);
     User getById(Long id);
-    List<User> search();
+    List<User> search();*/
 }

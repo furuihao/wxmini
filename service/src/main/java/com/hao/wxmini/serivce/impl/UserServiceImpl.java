@@ -27,6 +27,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> search(){
-        return userMapper.search();
+        return userMapper.search(null);
     }
 }
