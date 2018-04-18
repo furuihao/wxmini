@@ -24,12 +24,6 @@ dist/
 nbdist/
 .nb-gradle/
 /model/target/
-model/src/main/resources/
-model/src/test/
-persistence/src/main/resources/
-persistence/src/test/
-service/src/main/resources/
-service/src/test/
 /persistence/target/
 /service/target/
 /web/target/
