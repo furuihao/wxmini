@@ -1,0 +1,97 @@
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/${log4j2.root.path}_debug.log b/${log4j2.root.path}_debug.log[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/${log4j2.root.path}_info.log b/${log4j2.root.path}_info.log[m
+[1mdeleted file mode 100644[m
+[1mindex 8e4c696..0000000[m
+[1m--- a/${log4j2.root.path}_info.log[m
+[1m+++ /dev/null[m
+[36m@@ -1,138 +0,0 @@[m
+[31m-2018-04-15 23:29:07,881  INFO WxminiApplication:50 - Starting WxminiApplication on hao-PC with PID 8028 (E:\gitworkspace\wxmini\web\target\classes started by hao in E:\gitworkspace\wxmini)[m
+[31m-2018-04-15 23:29:07,898  INFO WxminiApplication:652 - No active profile set, falling back to default profiles: default[m
+[31m-2018-04-15 23:29:08,030  INFO AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1fe7a0f: startup date [Sun Apr 15 23:29:08 CST 2018]; root of context hierarchy[m
+[31m-2018-04-15 23:29:10,434  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'txManager' of type [com.hao.wxmini.config.tx.TxManager$$EnhancerBySpringCGLIB$$2c33d16d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)[m
+[31m-2018-04-15 23:29:11,667  INFO TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)[m
+[31m-2018-04-15 23:29:11,703  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"][m
+[31m-2018-04-15 23:29:11,725  INFO StandardService:180 - Starting service [Tomcat][m
+[31m-2018-04-15 23:29:11,727  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.5.28[m
+[31m-2018-04-15 23:29:11,738  INFO AprLifecycleListener:180 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Java\jdk1.8.0_131\bin;D:\Java\jdk1.8.0_131\jre\bin;E:\dev\apache-maven-3.5.0\bin;D:\Program Files\VisualSVN Server\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;d:\Program Files\Git\cmd;d:\Program Files\Git\mingw64\bin;d:\Program Files\Git\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Windows\system32;C:\Users\hao\AppData\Local\GitHubDesktop\bin;.][m
+[31m-2018-04-15 23:29:11,941  INFO [/]:180 - Initializing Spring embedded WebApplicationContext[m
+[31m-2018-04-15 23:29:11,941  INFO ContextLoader:285 - Root WebApplicationContext: initialization completed in 3917 ms[m
+[31m-2018-04-15 23:29:12,270  INFO ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/][m
+[31m-2018-04-15 23:29:12,279  INFO FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*][m
+[31m-2018-04-15 23:29:12,279  INFO FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*][m
+[31m-2018-04-15 23:29:12,280  INFO FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*][m
+[31m-2018-04-15 23:29:12,280  INFO FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*][m
+[31m-2018-04-15 23:29:14,448  INFO RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1fe7a0f: startup date [Sun Apr 15 23:29:08 CST 2018]; root of context hierarchy[m
+[31m-2018-04-15 23:29:14,600  INFO RequestMappingHandlerMapping:548 - Mapped "{[/user/save]}" onto public com.hao.wxmini.domain.User com.hao.wxmini.web.UserController.save(java.lang.String) throws java.lang.Exception[m
+[31m-2018-04-15 23:29:14,602  INFO RequestMappingHandlerMapping:548 - Mapped "{[/user/getById]}" onto public com.hao.wxmini.domain.User com.hao.wxmini.web.UserController.getUserById(java.lang.Long) throws java.lang.Exception[m
+[31m-2018-04-15 23:29:14,607  INFO RequestMappingHandlerMapping:548 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)[m
+[31m-2018-04-15 23:29:14,610  INFO RequestMappingHandlerMapping:548 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)[m
+[31m-2018-04-15 23:29:14,763  INFO SimpleUrlHandlerMapping:373 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler][m
+[31m-2018-04-15 23:29:14,764  INFO SimpleUrlHandlerMapping:373 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler][m
+[31m-2018-04-15 23:29:14,919  INFO SimpleUrlHandlerMapping:373 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler][m
+[31m-2018-04-15 23:29:15,463  INFO OptionalLiveReloadServer:57 - LiveReload server is running on port 35729[m
+[31m-2018-04-15 23:29:15,846  INFO AnnotationMBeanExporter:434 - Registering beans for JMX exposure on startup[m
+[31m-2018-04-15 23:29:15,847  INFO AnnotationMBeanExporter:896 - Bean with name 'dataSource' has been autodetected for JMX exposure[m
+[31m-2018-04-15 23:29:15,858  INFO AnnotationMBeanExporter:669 - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource][m
+[31m-2018-04-15 23:29:15,876  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"][m
+[31m-2018-04-15 23:29:15,891  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read[m
+[31m-2018-04-15 23:29:15,918  INFO TomcatWebServer:205 - Tomcat started on port(s): 8080 (http) with context path ''[m
+[31m-2018-04-15 23:29:15,923  INFO WxminiApplication:59 - Started WxminiApplication in 9.853 seconds (JVM running for 12.446)[m
+[31m-2018-04-15 23:29:39,836  INFO WxminiApplication:50 - Starting WxminiApplication on hao-PC with PID 5676 (E:\gitworkspace\wxmini\web\target\classes started by hao in E:\gitworkspace\wxmini)[m
+[31m-2018-04-15 23:29:39,884  INFO WxminiApplication:652 - No active profile set, falling back to default profiles: default[m
+[31m-2018-04-15 23:29:40,008  INFO AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6cf77000: startup date [Sun Apr 15 23:29:40 CST 2018]; root of context hierarchy[m
+[31m-2018-04-15 23:29:42,529  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'txManager' of type [com.hao.wxmini.config.tx.TxManager$$EnhancerBySpringCGLIB$$8da1f07d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)[m
+[31m-2018-04-15 23:29:43,705  INFO TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)[m
+[31m-2018-04-15 23:29:43,740  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"][m
+[31m-2018-04-15 23:29:43,763  INFO StandardService:180 - Starting service [Tomcat][m
+[31m-2018-04-15 23:29:43,765  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.5.28[m
+[31m-2018-04-15 23:29:43,777  INFO AprLifecycleListener:180 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Java\jdk1.8.0_131\bin;D:\Java\jdk1.8.0_131\jre\bin;E:\dev\apache-maven-3.5.0\bin;D:\Program Files\VisualSVN Server\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;d:\Program Files\Git\cmd;d:\Program Files\Git\mingw64\bin;d:\Program Files\Git\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Windows\system32;C:\Users\hao\AppData\Local\GitHubDesktop\bin;.][m
+[31m-2018-04-15 23:29:43,971  INFO [/]:180 - Initializing Spring embedded WebApplicationContext[m
+[31m-2018-04-15 23:29:43,972  INFO ContextLoader:285 - Root WebApplicationContext: initialization completed in 3969 ms[m
+[31m-2018-04-15 23:29:44,297  INFO ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/][m
+[31m-2018-04-15 23:29:44,306  INFO FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*][m
+[31m-2018-04-15 23:29:44,307  INFO FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*][m
+[31m-2018-04-15 23:29:44,307  INFO FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*][m
+[31m-2018-04-15 23:29:44,308  INFO FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*][m
+[31m-2018-04-15 23:29:46,541  INFO RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6cf77000: startup date [Sun Apr 15 23:29:40 CST 2018]; root of context hierarchy[m
+[31m-2018-04-15 23:29:46,708  INFO RequestMappingHandlerMapping:548 - Mapped "{[/user/save]}" onto public com.hao.wxmini.domain.User com.hao.wxmini.web.UserController.save(java.lang.String) throws java.lang.Exception[m
+[31m-2018-04-15 23:29:46,710  INFO RequestMappingHandlerMapping:548 - Mapped "{[/user/getById]}" onto public com.hao.wxmini.domain.User com.hao.wxmini.web.UserController.getUserById(java.lang.Long) throws java.lang.Exception[m
+[31m-2018-04-15 23:29:46,715  INFO RequestMappingHandlerMapping:548 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)[m
+[31m-2018-04-15 23:29:46,716  INFO RequestMappingHandlerMapping:548 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)[m
+[31m-2018-04-15 23:29:46,848  INFO SimpleUrlHandlerMapping:373 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler][m
+[31m-2018-04-15 23:29:46,848  INFO SimpleUrlHandlerMapping:373 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler][m
+[31m-2018-04-15 23:29:46,961  INFO SimpleUrlHandlerMapping:373 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler][m
+[31m-2018-04-15 23:29:47,478  INFO OptionalLiveReloadServer:57 - LiveReload server is running on port 35729[m
+[31m-2018-04-15 23:29:47,927  INFO AnnotationMBeanExporter:434 - Registering beans for JMX exposure on startup[m
+[31m-2018-04-15 23:29:47,928  INFO AnnotationMBeanExporter:896 - Bean with name 'dataSource' has been autodetected for JMX exposure[m
+[31m-2018-04-15 23:29:47,938  INFO AnnotationMBeanExporter:669 - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource][m
+[31m-2018-04-15 23:29:47,959  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"][m
+[31m-2018-04-15 23:29:47,976  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read[m
+[31m-2018-04-15 23:29:48,013  INFO TomcatWebServer:205 - Tomcat started on port(s): 8080 (http) with context path ''[m
+[31m-2018-04-15 23:29:48,023  INFO WxminiApplication:59 - Started WxminiApplication in 9.948 seconds (JVM running for 12.167)[m
+[31m-2018-04-15 23:31:18,697  INFO WxminiApplication:50 - Starting WxminiApplication on hao-PC with PID 3900 (E:\gitworkspace\wxmini\web\target\classes started by hao in E:\gitworkspace\wxmini)[m
+[31m-2018-04-15 23:31:18,705  INFO WxminiApplication:652 - No active profile set, falling back to default profiles: default[m
+[31m-2018-04-15 23:31:18,824  INFO AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@40e32af5: startup date [Sun Apr 15 23:31:18 CST 2018]; root of context hierarchy[m
+[31m-2018-04-15 23:31:21,401  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'txManager' of type [com.hao.wxmini.config.tx.TxManager$$EnhancerBySpringCGLIB$$80afecec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)[m
+[31m-2018-04-15 23:31:22,610  INFO TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)[m
+[31m-2018-04-15 23:31:22,637  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"][m
+[31m-2018-04-15 23:31:22,656  INFO StandardService:180 - Starting service [Tomcat][m
+[31m-2018-04-15 23:31:22,657  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.5.28[m
+[31m-2018-04-15 23:31:22,667  INFO AprLifecycleListener:180 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Java\jdk1.8.0_131\bin;D:\Java\jdk1.8.0_131\jre\bin;E:\dev\apache-maven-3.5.0\bin;D:\Program Files\VisualSVN Server\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;d:\Program Files\Git\cmd;d:\Program Files\Git\mingw64\bin;d:\Program Files\Git\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Windows\system32;C:\Users\hao\AppData\Local\GitHubDesktop\bin;.][m
+[31m-2018-04-15 23:31:22,877  INFO [/]:180 - Initializing Spring embedded WebApplicationContext[m
+[31m-2018-04-15 23:31:22,878  INFO ContextLoader:285 - Root WebApplicationContext: initialization completed in 4060 ms[m
+[31m-2018-04-15 23:31:23,302  INFO ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/][m
+[31m-2018-04-15 23:31:23,310  INFO FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*][m
+[31m-2018-04-15 23:31:23,311  INFO FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*][m
+[31m-2018-04-15 23:31:23,311  INFO FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*][m
+[31m-2018-04-15 23:31:23,312  INFO FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*][m
+[31m-2018-04-15 23:31:25,706  INFO RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@40e32af5: startup date [Sun Apr 15 23:31:18 CST 2018]; root of context hierarchy[m
+[31m-2018-04-15 23:31:25,909  INFO RequestMappingHandlerMapping:548 - Mapped "{[/user/save]}" onto public com.hao.wxmini.domain.User com.hao.wxmini.web.UserController.save(java.lang.String) throws java.lang.Exception[m
+[31m-2018-04-15 23:31:25,911  INFO RequestMappingHandlerMapping:548 - Mapped "{[/user/getById]}" onto public com.hao.wxmini.domain.User com.hao.wxmini.web.UserController.getUserById(java.lang.Long) throws java.lang.Exception[m
+[31m-2018-04-15 23:31:25,916  INFO RequestMappingHandlerMapping:548 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)[m
+[31m-2018-04-15 23:31:25,917  INFO RequestMappingHandlerMapping:548 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)[m
+[31m-2018-04-15 23:31:26,076  INFO SimpleUrlHandlerMapping:373 - Mappe

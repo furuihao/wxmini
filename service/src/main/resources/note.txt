@@ -1,0 +1,7 @@
+﻿mybatis官网：http://www.mybatis.org/mybatis-3/zh/getting-started.html
+快速学习 Spring Boot 技术栈:https://blog.csdn.net/column/details/15149.html?&page=1
+
+springboot(十三)：springboot小技巧
+初始化数据:https://blog.csdn.net/ityouknow/article/details/73836148
+
+https://blog.csdn.net/u012840332/article/details/54599476

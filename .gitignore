@@ -27,3 +27,4 @@ nbdist/
 /persistence/target/
 /service/target/
 /web/target/
+/logs/
