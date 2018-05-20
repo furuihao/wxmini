@@ -38,10 +38,15 @@ public class WebLogAspect {
         logger.info("IP : " + request.getRemoteAddr());
         logger.info("CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         logger.info("ARGS : " + Arrays.toString(joinPoint.getArgs()));
+
+        logger.debug("test debug");
+        logger.info("test info");
+        logger.warn("test warn");
+        logger.error("test error");
     }
 
     @AfterReturning(returning = "ret", pointcut = "webLog()")
     public void doAfterReturning(Object ret) {
-        logger.info("返回内容:" + ret.toString());
+        logger.info("返回内容:" + ret==null?"":ret.toString());
     }
 }

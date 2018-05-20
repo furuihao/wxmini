@@ -4,4 +4,11 @@
 springboot(十三)：springboot小技巧
 初始化数据:https://blog.csdn.net/ityouknow/article/details/73836148
 
+事务配置
 https://blog.csdn.net/u012840332/article/details/54599476
+
+
+
+保存为bat文件,手动启动mysql服务
+net start MySQL57
+pause
