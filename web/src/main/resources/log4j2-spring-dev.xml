@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL-->
+<configuration status="WARN">
+    <!--全局参数-->
+    <Properties>
+        <Property name="pattern">%d{yyyy-MM-dd HH:mm:ss,SSS} %5p %c{1}:%L - %m%n</Property>
+        <!--<Property name="log4j2.root.path">D:/logs/wxmini/</Property>-->
+        <Property name="LOG_HOME">logs/</Property>
+        <Property name="APP_LOG">app</Property>
+        <Property name="USER_LOG">user</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT" follow="true">
+            <!--控制台只输出level及以上级别的信息-->
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+        </Console>
+        <!-- 同一来源的Appender可以定义多个RollingRandomAccessFile，定义按天存储日志 -->
+        <!--
+            RollingRandomAccessFile Appender，相比RollingRandomAccessFileAppender有很大的性能提升，官网宣称是20-200%。
+            RollingRandomAccessFile的属性：
+
+            fileName  指定当前日志文件的位置和文件名称
+
+            filePattern  指定当发生Rolling时，文件的转移和重命名规则
+
+            SizeBasedTriggeringPolicy  指定当文件体积大于size指定的值时，触发Rolling
+
+            DefaultRolloverStrategy  指定最多保存的文件个数
+
+            TimeBasedTriggeringPolicy  这个配置需要和filePattern结合使用，
+            注意filePattern中配置的文件重命名规则是${FILE_NAME}-%d{yyyy-MM-dd HH-mm}-%i，最小的时间粒度是mm，
+            即分钟，TimeBasedTriggeringPolicy指定的size是1，结合起来就是每1分钟生成一个新文件。
+            如果改成%d{yyyy-MM-dd HH}，最小粒度为小时，则每一个小时生成一个文件。
+        -->
+        <RollingRandomAccessFile name="appLog" fileName="${LOG_HOME}/${APP_LOG}.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM}/${APP_LOG}-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/><!--表示一天生成一个文件-->
+                <SizeBasedTriggeringPolicy size="10 MB"/><!--或达到10M生成一个文件-->
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="userLog" fileName="${LOG_HOME}/${USER_LOG}.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM}/${USER_LOG}-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+    </Appenders>
+
+    <Loggers>
+
+        <!--过滤掉spring和mybatis的一些无用的DEBUG信息-->
+        <logger name="org.springframework" level="INFO"></logger>
+
+        <logger name="org.mybatis" level="INFO"></logger>
+
+        <!--只将com.hao.wxmini.web写到文件-->
+        <!--additivity="false"表示在该logger中输出的日志不会再延伸到父层logger。
+        这里如果改为true，则会延伸到Root Logger，遵循Root Logger的配置也输出一次。
+        默认为true-->
+        <!--<Logger name="com.hao.wxmini" level="info" additivity="false">
+            <AppenderRef ref="console"></AppenderRef>
+            <AppenderRef ref="appLog"></AppenderRef>
+        </Logger>-->
+
+        <Logger name="com.hao.wxmini" level="DEBUG" additivity="false">
+            <AppenderRef ref="console"></AppenderRef>
+            <AppenderRef ref="userLog"></AppenderRef>
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="console"></AppenderRef>
+            <AppenderRef ref="appLog"></AppenderRef>
+        </Root>
+    </Loggers>
+</configuration>
